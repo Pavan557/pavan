@@ -1,0 +1,18 @@
+node {
+    stage("checkout")
+    {
+       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'a3aaa864-ea95-4d2c-aa95-f52b55b0eee4', url: 'https://github.com/Pavan557/pavan.git']]]) 
+    }
+    stage("build")
+    {
+        sh label: '', script: ''
+    }
+    stage("test")
+    {
+        echo "pavan"
+        
+    }
+    stage("deploy"){
+        echo "kumar as a code"
+    }
+}
